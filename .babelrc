@@ -1,0 +1,21 @@
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    ["transform-define", "./env-config.js"],
+    "transform-decorators-legacy"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+
+      ]
+    },
+    "production": {
+      "plugins": [
+
+      ]
+    }
+  }
+}

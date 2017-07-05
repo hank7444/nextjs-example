@@ -10,11 +10,13 @@ import Link from 'next/link'
 
 import axios from 'axios';
 
+
 // Export an anonymous arrow function
 // which returns the template
 export default class Index extends Component {
 
   static async getInitialProps () {
+    /*
     if (!process.browser) {
       const res = await axios.get('http://api.football-data.org/v1/competitions/426/leagueTable')
 
@@ -25,7 +27,13 @@ export default class Index extends Component {
       return {
         data: JSON.parse(sessionStorage.getItem('bpl')),
       };
-    }
+    }*/
+
+    return {
+      data: {
+        standing: [],
+      },
+    };
   }
 
   static propTypes = {
@@ -37,9 +45,13 @@ export default class Index extends Component {
   }
   render () {
 
+    console.log('__TEST_VAR__', __TEST_VAR__);
+
   	const logoStyle = {
       width: '30px'
     }
+
+
 
     return (
       <div>
