@@ -4,9 +4,10 @@ import Link from 'next/link'
 import axios from 'axios';
 
 export default class Details extends Component {
-  static async getInitialProps ({query}) {
+  static async getInitialProps({ query }) {
 
       // Get id from query
+      /*
       var id = query.id;
 
       if (!process.browser) {
@@ -27,7 +28,11 @@ export default class Details extends Component {
         return {
           standing: bplData.standing.filter(s => s.position == id),
         };
-      }
+      }*/
+
+      return {
+
+      };
   }
 
   componentDidMount () {
@@ -55,12 +60,16 @@ export default class Details extends Component {
 
         <div className="pure-g">
           <div className="pure-u-8-24"></div>
+
+          {/*
           <div className="pure-u-4-24">
             <h2>{this.props.standing[0].teamName}</h2>
             <img src={this.props.standing[0].crestURI} className="pure-img"/>
             <h3>Points: {this.props.standing[0].points}</h3>
           </div>
+          */}
           <div className="pure-u-12-24">
+            {/*
             <ul style={detailStyle.ul}>
               <li><strong>Goals</strong>: {this.props.standing[0].goals}</li>
               <li><strong>Wins</strong>: {this.props.standing[0].wins}</li>
@@ -70,6 +79,7 @@ export default class Details extends Component {
               <li><strong>Goal Difference</strong>: {this.props.standing[0].goalDifference}</li>
               <li><strong>Played</strong>: {this.props.standing[0].playedGames}</li>
             </ul>
+            */}
             <Link href="/">Home</Link>
           </div>
         </div>
